@@ -102,7 +102,7 @@ void MemoryCompressor::compress(Stream* in, Stream* out, uint64_t max_count) {
   std::unique_ptr<uint8_t[]> in_buffer(new uint8_t[kBufferSize]);
   std::unique_ptr<uint8_t[]> out_buffer(new uint8_t[getMaxExpansion(kBufferSize)]);
   for (;;) {
-    const size_t n = in->read(in_buffer.get(), std::min(kBufferSize, max_count));
+    const size_t n = in->read(in_buffer.get(), std::min((uint64_t)kBufferSize, (uint64_t)max_count));
     if (n == 0) {
       break;
     }

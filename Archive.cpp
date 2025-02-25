@@ -610,7 +610,7 @@ public:
     // Extend the match.
     uint64_t len = 0;
     for (;;) {
-      size_t cur_max = static_cast<size_t>(std::min(kBlockSize, max_read - len));
+      size_t cur_max = static_cast<size_t>(std::min((size_t)kBlockSize, (size_t)(max_read - len)));
       auto c1 = stream->readat(compare_pos + len, compare_block, cur_max);
       auto c2 = file_stream->readat(file_pos + len, file_block, cur_max);
       if (c1 == 0 || c2 == 0) break;
