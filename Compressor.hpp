@@ -33,7 +33,7 @@
 #include <list>
 #include <ctime>
 #include <iomanip>
-#include <malloc.h>
+#include <cstdlib>
 
 #include "Stream.hpp"
 #include "Util.hpp"
