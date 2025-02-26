@@ -46,3 +46,4 @@ Sandy Bridge 2630QM, 8GB RAM, Windows 7 x64, GCC compile (make.bat)
 <tr><th>mcm v0.83 -h9</th><th>18,504,139</th><th>58s</th><th>54s
 <tr><th>mcm v0.83 -x9</th><th>18,379,121</th><th>64s</th><th>59s
 </table>
+
